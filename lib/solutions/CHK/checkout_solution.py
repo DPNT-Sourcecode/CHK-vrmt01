@@ -56,7 +56,7 @@ def checkout(skus):
             
                 total -= x * items[free[item][1]]
 
-                
+                occrs[item] = occrs[item] - x
 
 
 
@@ -103,6 +103,7 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
+
 
 
 
