@@ -27,6 +27,7 @@ def checkout(skus):
 
     total = 0
     occrs = {}
+    offers = {}
 
     #Loop sku
     #   add cost to total sum
@@ -40,8 +41,16 @@ def checkout(skus):
         cost = int(line[1])
         item = line[0]
 
-        total += cost
-        x = occrs
+        total += cost   #Add cost to total
+        curr = occrs.get(item, 0)  #Current no. of occurences
+        occrs[item] = curr + 1 #Increment no. of occurences
+
+        #Check if offer
+        if item in offers:
+            #Check if offer satisified?
+        else:
+            
+
 
 
 
@@ -49,6 +58,7 @@ def checkout(skus):
 
 
 checkout(test_input)
+
 
 
 
