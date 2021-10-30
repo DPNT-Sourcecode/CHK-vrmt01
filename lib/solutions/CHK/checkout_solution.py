@@ -72,10 +72,6 @@ def checkout(skus):
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
         
-
-        
-    print(total)
-
     #Apply offers 
     for item in occrs:
 
@@ -129,23 +125,19 @@ def checkout(skus):
     for i in range(len(multi)):
 
         item = multi[i]
-        print(item)
 
         if item in occrs:
             #Loop for no. of occrs
             for j in range(occrs[item]):
                 count += 1
-                print(count)
 
                 cost += items[item]
-                print(cost)
 
                 if count == 3:
                     count = 0
-                    
-                    print(count)
                     total -= (cost - multi_price)
-                    print(total)
+
+                    cost = 0
 
 
     return total
@@ -168,6 +160,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
 
