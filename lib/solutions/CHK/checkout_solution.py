@@ -21,17 +21,21 @@ def checkout(skus):
              "E" : 40
              }
 
+    #Count occurences of items
     for sku in skus:
 
         if not sku in items:
             return -1
-
 
         cost = items[sku]
 
         total += cost   #Add cost to total
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
+
+    #Apply offers 
+    for item in offers:
+        
 
     return total
 
