@@ -1,6 +1,8 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
+import math
+
 test_input = "AAAAAAAAAAAAAABBBBEEEE"
 
 def checkout(skus):
@@ -65,7 +67,8 @@ def checkout(skus):
 
         #B1G1F
         if item in free:
-            
+            count = math.floor(occrs[item] / free[item][0]
+            print(count) 
 
 
 
@@ -90,6 +93,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
+
 
 
 
