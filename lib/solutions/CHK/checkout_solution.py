@@ -56,9 +56,16 @@ def checkout(skus):
 
 
 
-def offer_comb(ans, nums, goal):
+def offer_comb(ans, nums, temp, goal, i):
 
-    
+    if goal >= 0:
+        ans.append(temp)
+        return
+
+    for i in range(i, len(nums)):
+        if(goal - nums[i]) >= 0:
+            temp.append(nums[i])
+            offer_comb(ans, nums, temp, goal-nums[i], i)
     
 
 
@@ -68,6 +75,7 @@ def offer_comb(ans, nums, goal):
 
 
 print(checkout(test_input))
+
 
 
 
