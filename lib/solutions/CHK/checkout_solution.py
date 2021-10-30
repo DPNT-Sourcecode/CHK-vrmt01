@@ -36,6 +36,7 @@ def checkout(skus):
     #Apply offers 
     for item in offers:
         
+        print(item)
 
     return total
 
