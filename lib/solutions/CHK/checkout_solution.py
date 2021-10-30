@@ -52,6 +52,14 @@ def checkout(skus):
         offer_comb(ans, nums, temp, occrs[item], 0)
         print(ans)
 
+        max = []
+        for comb in ans:
+            total = 0
+            for i in range(len(comb)):
+                
+
+
+
     return total
 
 
@@ -70,12 +78,6 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
-    
-
-
-    
-    
-
 
 
 print(checkout(test_input))
