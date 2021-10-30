@@ -29,6 +29,8 @@ def checkout(skus):
             "U" : [4, "U"]
             }
 
+    multi = {}
+
     items = {"A" : 50, 
              "B" : 30, 
              "C" : 20, 
@@ -137,3 +139,4 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
