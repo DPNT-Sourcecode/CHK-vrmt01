@@ -96,6 +96,8 @@ def checkout(skus):
 
 
 
+    multi_occrs = []
+
     for item in occrs:            
 
         if item in offers:
@@ -121,12 +123,9 @@ def checkout(skus):
 
         #multi deals
         if item in multi:
+            multi_occrs.append(item)
 
-            #Find most expensive combinations from multi
-            #Calculate discount 
-            #apply discount
-
-            print(item)
+    print(mu)
 
 
     return total
@@ -149,5 +148,6 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
