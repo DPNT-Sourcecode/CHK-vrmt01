@@ -1,7 +1,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
-test_input = "AAAAAAAAAAAAAA"
+test_input = "AAAAAAAAAAAAAABBBB"
 
 def checkout(skus):
 
@@ -11,7 +11,8 @@ def checkout(skus):
     total = 0
     occrs = {}
 
-    offers = {"A" : {3 : 20, 5 : 50}, 
+    offers = {"A" : {3 : 20, 5 : 50},
+              "B" : {2 : 15}
               }
 
     items = {"A" : 50, 
@@ -43,8 +44,7 @@ def checkout(skus):
         ans = []
         temp = []
 
-        offer_comb(ans, nums, temp, occrs[item], 0)
-        print(ans)
+        offer_comb(ans, nums, temp, occrs[item], 0) #Compute all combinations of offers
 
         best_comb = []
         maximum = 0
@@ -57,8 +57,7 @@ def checkout(skus):
                 maximum = discount
                 best_comb = comb
 
-        print(maximum)
-        print(best_comb)
+        total -= maximum
 
 
     return total
@@ -81,5 +80,6 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 checkout(test_input)
+
 
 
