@@ -59,7 +59,7 @@ def checkout(skus):
             
                 total -= x * items[free[item][1]]
 
-                occrs.update({})
+                occrs.update({free_item : occrs[free_item] - x})
 
     print(occrs)
 
@@ -111,6 +111,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
 
