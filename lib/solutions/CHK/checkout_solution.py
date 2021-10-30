@@ -55,27 +55,15 @@ def checkout(skus):
 
 
 
-def offer_comb(nums, goal):
+def offer_comb(nums, goal, partial=[]):
     res = []
 
-    def dfs(i, current, total):
-        if total <= goal:
-            res.append(current.copy())
-            print
-        if i >= len(nums) or total > goal:
-            return
-
-        current.append(nums[i])
-        dfs(i, current, total+nums[i])
-        current.pop()
-        dfs(i+1, current, goal)
-
-    dfs(0, [], 0)
-
-    return res
+    if 
+    
 
     
 
 
 
 print(checkout(test_input))
+
