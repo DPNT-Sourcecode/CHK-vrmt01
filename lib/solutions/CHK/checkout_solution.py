@@ -6,7 +6,7 @@ def checkout(skus):
         return -1
 
     #Split input into lines and remove first 3 and last
-    lines = skus.splitlines()[3:-1]
+    lines = skus.splitlines()
 
     #Split each line by "|" and remove first and last
     lines = [item.split("|")[1:-1] for item in lines]
@@ -40,3 +40,4 @@ def checkout(skus):
                 offers[item] = [num_needed, discount]
 
     return total
+
