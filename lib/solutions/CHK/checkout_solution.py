@@ -1,13 +1,6 @@
 
 
-test_input = """+------+-------+----------------+
-| Item | Price | Special offers |
-+------+-------+----------------+
-| A    | 50    | 3A for 130     |
-| B    | 30    | 2B for 45      |
-| C    | 20    |                |
-| D    | 15    |                |
-+------+-------+----------------+"""
+test_input = 500
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -15,6 +8,7 @@ def checkout(skus):
     
     #Check if illegal input
     #   return -1
+    
 
     #Split input into lines and remove first 3 and last
     lines = skus.splitlines()[3:-1]
@@ -50,16 +44,6 @@ def checkout(skus):
                 discount = cost * num_needed - int(offer[2])
                 offers[item] = [num_needed, discount]
 
-                
+    return total
 
-
-checkout(test_input)
-
-
-
-
-
-
-
-
-
+print(checkout(test_input))
