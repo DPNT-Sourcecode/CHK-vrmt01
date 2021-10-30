@@ -15,6 +15,8 @@ def checkout(skus):
               "B" : {2 : 15}
               }
 
+    b1g1f = {"E" : [2, "B"]}
+
     items = {"A" : 50, 
              "B" : 30, 
              "C" : 20, 
@@ -57,6 +59,8 @@ def checkout(skus):
                 maximum = discount
                 best_comb = comb
 
+        print(maximum)
+        print(best_comb)
         total -= maximum
 
 
@@ -79,7 +83,7 @@ def offer_comb(ans, nums, temp, sum, i):
             temp.remove(nums[i])
 
 
-checkout(test_input)
+print(checkout(test_input))
 
 
 
