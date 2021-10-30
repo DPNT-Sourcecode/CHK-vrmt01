@@ -52,12 +52,14 @@ def checkout(skus):
 
             if item in offers:
                 #Check if offer satisified?
+                if occrs[item] == offers[item][0]:
+                    total -= offers[item][]
             else:
                 #Add offer
                 num_needed = int(offer[0][:-1])
-                discount = # cost  
+                discount = cost * num_needed - int(offer[2]# (cost * no.needed) - offer price 
                 # {Item name -> [no. needed, discount?]}
-                offers[item] = []
+                offers[item] = [num_needed, discount]
 
 
 
@@ -65,6 +67,7 @@ def checkout(skus):
 
 
 checkout(test_input)
+
 
 
 
