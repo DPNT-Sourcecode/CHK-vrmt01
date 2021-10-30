@@ -3,7 +3,7 @@
 
 import math
 
-test = "EEEEBBFFF"
+test = "FFF"
 
 def checkout(skus):
 
@@ -108,3 +108,6 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
+
+
+print(checkout(test))
