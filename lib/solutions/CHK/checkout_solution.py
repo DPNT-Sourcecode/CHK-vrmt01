@@ -1,5 +1,6 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
+
 def checkout(skus):
 
     if type(skus) != str:
@@ -26,6 +27,7 @@ def checkout(skus):
             #Check if offer satisified
             if occrs[sku] == offers[sku][0]:
                 total -= offers[sku][1]
+                occrs.pop(sku)
 
     return total
 
