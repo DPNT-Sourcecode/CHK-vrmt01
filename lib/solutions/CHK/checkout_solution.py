@@ -6,9 +6,8 @@ test_input = 500
 # skus = unicode string
 def checkout(skus):
     
-    #Check if illegal input
-    #   return -1
-    
+    if not type(skus) == str:
+        return -1
 
     #Split input into lines and remove first 3 and last
     lines = skus.splitlines()[3:-1]
