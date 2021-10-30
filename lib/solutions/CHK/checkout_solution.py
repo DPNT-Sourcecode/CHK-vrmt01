@@ -13,7 +13,7 @@ def checkout(skus):
 
     offers = {"A" : [[3, 20], [5, 50]], 
               "B" : [[2, 15]],
-              "E" : [[2, 30]]
+              "E" : [[2, 30]] #TODO 
               }
 
     items = {"A" : 50, 
@@ -40,12 +40,16 @@ def checkout(skus):
         #Find optimal combination of special offers
         nums = []
         for offer in offers[item]:
-            nums.append()
-
-
-        print(item)
+            nums.append(offer[0])
+            
+        print(nums)
 
     return total
+
+
+
+def offer_comb(nums, goal, ):
+
 
 
 print(checkout(test_input))
