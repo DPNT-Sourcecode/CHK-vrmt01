@@ -3,7 +3,7 @@
 
 import math
 
-test = "EEEEBB"
+test = "EEEEBBFFF"
 
 def checkout(skus):
 
@@ -17,13 +17,15 @@ def checkout(skus):
               "B" : {2 : 15}
               }
 
-    free = {"E" : [2, "B"]}
+    free = {"E" : [2, "B"],
+            "F" : [3, "F"]}
 
     items = {"A" : 50, 
              "B" : 30, 
              "C" : 20, 
              "D" : 15,
-             "E" : 40
+             "E" : 40,
+             "F" : 10
              }
 
     #Count occurences of items
