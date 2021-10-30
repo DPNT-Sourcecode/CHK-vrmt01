@@ -8,8 +8,16 @@ def checkout(skus):
 
     total = 0
     occrs = {}
-    offers = {"A" : [3, 20], "B" : [2, 15]}
-    items = {"A" : 50, "B" : 30, "C" : 20, "D" : 15}
+    offers = {"A" : [3, 20], 
+              "B" : [2, 15]
+              }
+
+    items = {"A" : 50, 
+             "B" : 30, 
+             "C" : 20, 
+             "D" : 15,
+             "E" : 40
+             }
 
     for sku in skus:
 
