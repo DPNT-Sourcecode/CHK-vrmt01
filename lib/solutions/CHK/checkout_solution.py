@@ -119,10 +119,14 @@ def checkout(skus):
 
             total -= maximum
 
+        #multi deals
+        if item in multi:
 
-            #multi deals
-            if item in multi:
-                print(item)
+            #Find most expensive combinations from multi
+            #Calculate discount 
+            #apply discount
+
+            print(item)
 
 
     return total
