@@ -140,7 +140,3 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
-
-
-
-
