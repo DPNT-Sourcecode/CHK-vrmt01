@@ -3,8 +3,6 @@
 
 import math
 
-test_input = "AAAAAAAAAAAAAAEEEEEE"
-
 def checkout(skus):
 
     if type(skus) != str:
@@ -38,8 +36,6 @@ def checkout(skus):
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
 
-    print(occrs)
-
     #Apply offers 
     for item in occrs:
 
@@ -62,7 +58,6 @@ def checkout(skus):
                     maximum = discount
                     best_comb = comb
 
-            print(best_comb)
             total -= maximum
 
         #B1G1F
@@ -100,8 +95,5 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
-
-
-print(checkout(test_input))
 
 
