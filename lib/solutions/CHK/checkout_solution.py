@@ -1,6 +1,8 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
+test_input = "AAABBB"
+
 def checkout(skus):
 
     if type(skus) != str:
@@ -35,7 +37,15 @@ def checkout(skus):
 
     #Apply offers 
     for item in offers:
-        
+        #Find optimal combination of special offers
+        nums = []
+        for offer in offers[item]:
+            nums.append()
+
+
         print(item)
 
     return total
+
+
+print(checkout(test_input))
