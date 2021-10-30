@@ -3,7 +3,7 @@
 
 import math
 
-test_input = "AAAAAAAAAAAAAABBBBEEEE"
+test_input = "AAAAAAAAAAAAAAEEEEEE"
 
 def checkout(skus):
 
@@ -62,13 +62,14 @@ def checkout(skus):
                     maximum = discount
                     best_comb = comb
 
-            
+            print(best_comb)
             total -= maximum
 
         #B1G1F
         if item in free:
-            count = math.floor(occrs[item] / free[item][0]
-            print(count) 
+            count = math.floor(occrs[item] / free[item][0])
+            
+            total -= count * items[free[item][1]]
 
 
 
@@ -93,8 +94,3 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
-
-
-
-
-
