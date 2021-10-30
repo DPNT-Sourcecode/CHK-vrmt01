@@ -30,6 +30,7 @@ def checkout(skus):
             }
 
     multi = ["Z", "S", "T", "Y", "X"]   #Ordered by highest price first
+    multi_price = 45
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -122,17 +123,22 @@ def checkout(skus):
 
     #Loop multi items
     
+    count = 0
+    cost = 0
     for i in range(len(multi)):
 
-        cost = 0
         item = multi[i]
 
         if item in occrs:
             #Loop for no. of occrs
             for j in range(occrs[item]):
+                count += 1
                 cost += items[item]
+                if count == 3:
+                    count = 0
+                    total -= (cost - multi_price)
 
-            print(str(cost) + " " + item)
+            
     
 
 
@@ -156,3 +162,4 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
