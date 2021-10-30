@@ -3,7 +3,7 @@
 
 import math
 
-test = "TXZZZ"
+test = "STXSTX"
 
 def checkout(skus):
 
@@ -71,9 +71,10 @@ def checkout(skus):
         total += cost   #Add cost to total
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
+        
 
         
-    print(occrs)
+    print(total)
 
     #Apply offers 
     for item in occrs:
@@ -159,5 +160,6 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
