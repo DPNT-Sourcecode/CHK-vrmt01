@@ -40,17 +40,16 @@ def checkout(skus):
     #Apply offers 
     for item in occrs:
 
-        offers = 
+        item_offers = offers[item]
 
-
-        #Find optimal combination of special offers
         nums = []
-        for offer in offers[item]:
+        for offer in item_offers:
             nums.append(offer[0])
-            
 
-        if item in occrs:
-            print(offer_comb(nums, occrs[item]))
+        print(nums)
+        #Find optimal combination of special offers
+        offer_comb(nums, occrs[item])
+
 
     return total
 
@@ -62,7 +61,7 @@ def offer_comb(nums, goal):
     def dfs(i, current, total):
         if total <= goal:
             res.append(current.copy())
-            return
+            print
         if i >= len(nums) or total > goal:
             return
 
