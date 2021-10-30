@@ -35,8 +35,14 @@ def checkout(skus):
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
 
+    print(occrs)
+
     #Apply offers 
-    for item in offers:
+    for item in occrs:
+
+        offers = 
+
+
         #Find optimal combination of special offers
         nums = []
         for offer in offers[item]:
@@ -44,7 +50,7 @@ def checkout(skus):
             
 
         if item in occrs:
-            offer_comb(nums, occrs[item])
+            print(offer_comb(nums, occrs[item]))
 
     return total
 
@@ -62,14 +68,15 @@ def offer_comb(nums, goal):
 
         current.append(nums[i])
         dfs(i, current, total+nums[i])
+        current.pop()
+        dfs(i+1, current, goal)
+
+    dfs(0, [], 0)
+
+    return res
 
     
 
 
 
 print(checkout(test_input))
-
-
-
-
-
