@@ -45,12 +45,16 @@ def checkout(skus):
         curr = occrs.get(item, 0)  #Current no. of occurences
         occrs[item] = curr + 1 #Increment no. of occurences
 
-        #Check if offer
-        if item in offers:
-            #Check if offer satisified?
-        else:
-            
+        offer = line[2].strip().split(" ")
 
+        #Check offer exists
+        if len(offer) > 2:
+
+            if item in offers:
+                #Check if offer satisified?
+            else:
+                #Add offer
+                
 
 
 
@@ -58,6 +62,7 @@ def checkout(skus):
 
 
 checkout(test_input)
+
 
 
 
