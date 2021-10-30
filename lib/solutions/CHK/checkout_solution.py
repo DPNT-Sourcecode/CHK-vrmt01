@@ -38,11 +38,7 @@ def checkout(skus):
     #Apply offers 
     for item in occrs:
 
-        item_offers = offers[item]
-
-        nums = []
-        for offer in item_offers:
-            nums.append(offer[0])
+        nums = list(offers.get(item).keys())
 
         ans = []
         temp = []
@@ -81,3 +77,4 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
+
