@@ -1,7 +1,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
-test_input = "AAABBB"
+test_input = "AAAAAA"
 
 def checkout(skus):
 
@@ -50,23 +50,15 @@ def checkout(skus):
 
 
 
-def offer_comb(nums, goal, partial=[]):
+def offer_comb(nums, goal):
+    
 
-    s = sum(partial)
-
-    if s < goal:
-        print(partial)
-    if s >= goal:
-        return
-
-    for i in range(len(nums)):
-        n = nums[i]
-        remaining = nums[i+1:]
-        offer_comb(remaining, goal, partial + [n])
+    
 
 
 
 print(checkout(test_input))
+
 
 
 
