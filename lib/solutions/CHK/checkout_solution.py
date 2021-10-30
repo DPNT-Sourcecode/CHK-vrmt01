@@ -1,7 +1,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
-test_input = "AAAAAAAAAAAAAABBBB"
+test_input = "AAAAAAAAAAAAAABBBBEEEE"
 
 def checkout(skus):
 
@@ -15,7 +15,7 @@ def checkout(skus):
               "B" : {2 : 15}
               }
 
-    b1g1f = {"E" : [2, "B"]}
+    free = {"E" : [2, "B"]}
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -41,27 +41,33 @@ def checkout(skus):
     #Apply offers 
     for item in occrs:
 
-        nums = list(offers.get(item).keys())
+        if item in offers:
+            nums = list(offers.get(item).keys())
 
-        ans = []
-        temp = []
+            ans = []
+            temp = []
 
-        offer_comb(ans, nums, temp, occrs[item], 0) #Compute all combinations of offers
+            offer_comb(ans, nums, temp, occrs[item], 0) #Compute all combinations of offers
 
-        best_comb = []
-        maximum = 0
-        for comb in ans:
-            discount = 0
-            for i in range(len(comb)):
-                discount += offers[item][comb[i]]
+            best_comb = []
+            maximum = 0
+            for comb in ans:
+                discount = 0
+                for i in range(len(comb)):
+                    discount += offers[item][comb[i]]
 
-            if maximum < discount:
-                maximum = discount
-                best_comb = comb
+                if maximum < discount:
+                    maximum = discount
+                    best_comb = comb
 
-        print(maximum)
-        print(best_comb)
-        total -= maximum
+            
+            total -= maximum
+
+        #B1G1F
+        if item in free:
+            
+
+
 
 
     return total
@@ -84,6 +90,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
+
 
 
 
