@@ -8,8 +8,10 @@ def checkout(skus):
 
     total = 0
     occrs = {}
-    offers = {"A" : [3, 20], 
-              "B" : [2, 15]
+
+    offers = {"A" : [[3, 20], ["A", 5, 50]], 
+              "B" : [[2, 15]],
+              "E" : [[2, ]]
               }
 
     items = {"A" : 50, 
@@ -38,3 +40,4 @@ def checkout(skus):
                 occrs.pop(sku)
 
     return total
+
