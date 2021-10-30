@@ -16,11 +16,18 @@ def checkout(skus):
     offers = {"A" : {3 : 20, 5 : 50},
               "B" : {2 : 15},
               "H" : {5 : 5, 10 : 20},
-              "K" : {2 : }
+              "K" : {2 : 10},
+              "P" : {5 : 50},
+              "Q" : {3 : 10},
+              "V" : {2: }
               }
 
     free = {"E" : [2, "B"],
-            "F" : [3, "F"]}
+            "F" : [3, "F"],
+            "N" : [3, "M"],
+            "R" : [3, "Q"],
+            "U" : [4, "U"]
+            }
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -133,5 +140,6 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
