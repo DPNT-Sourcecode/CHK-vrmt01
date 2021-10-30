@@ -3,7 +3,7 @@
 
 import math
 
-test = "FFFSTXXXTSSTSXS"
+test = "TXZZZ"
 
 def checkout(skus):
 
@@ -138,9 +138,6 @@ def checkout(skus):
                     count = 0
                     total -= (cost - multi_price)
 
-            
-    
-
 
     return total
 
@@ -162,4 +159,5 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
