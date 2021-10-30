@@ -48,7 +48,19 @@ def checkout(skus):
 
 
 
-def offer_comb(nums, goal, ):
+def offer_comb(nums, goal, partial=[]):
+
+    s = sum(partial)
+
+    if s == goal:
+        #
+    if s >= target:
+        return
+
+for i in range(len(nums)):
+    n = nums[i]
+    remaining = nums[i+1:]
+    offer_comb(remaining, goal, partial + [n])
 
 
 
