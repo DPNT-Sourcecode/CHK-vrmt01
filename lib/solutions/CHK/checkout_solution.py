@@ -56,13 +56,19 @@ def checkout(skus):
 
 
 
-def offer_comb(nums, goal, partial=[]):
+def offer_comb(ans, nums, goal):
+
+    
+    
+
+
     
     
 
 
 
 print(checkout(test_input))
+
 
 
 
