@@ -46,11 +46,11 @@ def checkout(skus):
         for offer in item_offers:
             nums.append(offer[0])
 
-        print(nums)
-        print(occrs[item])
-        #Find optimal combination of special offers
-        print(offer_comb(nums, occrs[item]))
+        ans = []
+        temp = []
 
+        offer_comb(ans, nums, temp, occrs[item], 0)
+        print(ans)
 
     return total
 
@@ -58,7 +58,7 @@ def checkout(skus):
 
 def offer_comb(ans, nums, temp, goal, i):
 
-    if goal >= 0:
+    if goal == 0:
         ans.append(temp)
         return
 
@@ -66,6 +66,8 @@ def offer_comb(ans, nums, temp, goal, i):
         if(goal - nums[i]) >= 0:
             temp.append(nums[i])
             offer_comb(ans, nums, temp, goal-nums[i], i)
+
+            temp.remove(nums[i])
     
 
 
@@ -75,6 +77,7 @@ def offer_comb(ans, nums, temp, goal, i):
 
 
 print(checkout(test_input))
+
 
 
 
