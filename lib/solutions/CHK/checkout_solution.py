@@ -3,6 +3,8 @@
 
 import math
 
+test = "EEEEBB"
+
 def checkout(skus):
 
     if type(skus) != str:
@@ -37,6 +39,7 @@ def checkout(skus):
         occrs[sku] = curr + 1 #Increment no. of occurences
 
         
+    print(occrs)
 
     #Apply offers 
     for item in occrs:
@@ -56,7 +59,9 @@ def checkout(skus):
             
                 total -= x * items[free[item][1]]
 
-                occrs[item] = occrs[item] - x
+                occrs.update({})
+
+    print(occrs)
 
 
 
@@ -103,6 +108,9 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
+
+
+print(checkout(test))
 
 
 
