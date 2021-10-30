@@ -41,9 +41,6 @@ def checkout(skus):
         nums = []
         for offer in offers[item]:
             nums.append(offer[0])
-
-
-        
             
         print(nums)
 
@@ -51,9 +48,22 @@ def checkout(skus):
 
 
 
+def offer_comb(num, goal, partial=[]):
 
+    s = sum(partial)
+
+    if s < goal:
+        print(partial)
+    if s >= goal:
+        return
+
+    for i in range(len(nums)):
+    n = nums[i]
+    remaining = nums[i+1:]
+    offer_comb(remaining, goal, partial + [n])
 
 
 
 print(checkout(test_input))
+
 
