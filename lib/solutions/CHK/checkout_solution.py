@@ -3,7 +3,7 @@
 
 import math
 
-test = "FFFSTX"
+test = "FFFSTXXXTSSTSXS"
 
 def checkout(skus):
 
@@ -29,7 +29,7 @@ def checkout(skus):
             "U" : [4, "U"]
             }
 
-    multi = ["S", "T", "X", "Y", "Z"]
+    multi = ["Z", "S", "T", "Y", "X"]
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -95,9 +95,6 @@ def checkout(skus):
                 occrs.update({free_item : occrs[free_item] - x})
 
 
-
-    multi_occrs = []
-
     for item in occrs:            
 
         if item in offers:
@@ -121,12 +118,6 @@ def checkout(skus):
 
             total -= maximum
 
-        #multi deals
-        if item in multi:
-            multi_occrs.append(item)
-
-    print(mu)
-
 
     return total
 
@@ -148,6 +139,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
 
