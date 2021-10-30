@@ -3,4 +3,21 @@
 # skus = unicode string
 def checkout(skus):
     
-    raise NotImplementedError()
+    #Check if illegal input
+    #   return -1
+
+    #Split input into lines
+    #   remove first and last
+
+    #Split each line by "|"
+
+
+    #Loop sku
+
+
+
+
+
+
+    return -1
+
