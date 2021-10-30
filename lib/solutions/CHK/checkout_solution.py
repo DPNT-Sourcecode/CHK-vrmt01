@@ -68,11 +68,13 @@ def checkout(skus):
         #B1G1F
         if item in free:
 
+            #How many possible discount
             count = math.floor(occrs[item] / free[item][0])
 
-            
-            
-            total -= count * items[free[item][1]]
+            #Item thats free
+            free_item = free[item][1]
+            print(free_item)
+
 
 
 
@@ -97,3 +99,4 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
+
