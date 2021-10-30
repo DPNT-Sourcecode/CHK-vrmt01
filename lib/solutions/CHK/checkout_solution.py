@@ -7,8 +7,6 @@ test_input = """+------+-------+----------------+
 | B    | 30    | 2B for 45      |
 | C    | 20    |                |
 | D    | 15    |                |
-| A    | 50    | 3A for 130     |
-| A    | 50    | 3A for 130     |
 +------+-------+----------------+"""
 
 # noinspection PyUnusedLocal
@@ -18,8 +16,7 @@ def checkout(skus):
     #Check if illegal input
     #   return -1
 
-    #Split input into lines
-    #   remove first 3 and last
+    #Split input into lines and remove first 3 and last
     lines = skus.splitlines()[3:-1]
 
     #Split each line by "|" and remove first and last
@@ -28,13 +25,6 @@ def checkout(skus):
     total = 0
     occrs = {}
     offers = {}
-
-    #Loop sku
-    #   add cost to total sum
-    #   add occurnce of item into dictionary
-    #   check if offer?
-    #       if so, satisifed?
-    #           if so, reduce sum
 
     for line in lines:
 
@@ -47,26 +37,24 @@ def checkout(skus):
 
         offer = line[2].strip().split(" ")
 
-        #Check offer exists
+        #Check offer exists in sku
         if len(offer) > 2:
 
             if item in offers:
-                #Check if offer satisified?
+                #Check if offer satisified
                 if occrs[item] == offers[item][0]:
-                    total -= offers[item][]
+                    total -= offers[item][1]
             else:
                 #Add offer
                 num_needed = int(offer[0][:-1])
-                discount = cost * num_needed - int(offer[2]# (cost * no.needed) - offer price 
-                # {Item name -> [no. needed, discount?]}
+                discount = cost * num_needed - int(offer[2])
                 offers[item] = [num_needed, discount]
 
-
-
-    return -1
+                
 
 
 checkout(test_input)
+
 
 
 
