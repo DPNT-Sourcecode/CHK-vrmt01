@@ -67,7 +67,10 @@ def checkout(skus):
 
         #B1G1F
         if item in free:
+
             count = math.floor(occrs[item] / free[item][0])
+
+            
             
             total -= count * items[free[item][1]]
 
