@@ -39,4 +39,3 @@ def checkout(skus):
         print(item)
 
     return total
-
