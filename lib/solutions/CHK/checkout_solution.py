@@ -121,15 +121,18 @@ def checkout(skus):
     #Multi
 
     #Loop multi items
+    
     for i in range(len(multi)):
 
+        cost = 0
         item = multi[i]
 
-        #Loop for no. of occrs
-        for j in range(occrs[item]):
-            cost += items[]
+        if item in occrs:
+            #Loop for no. of occrs
+            for j in range(occrs[item]):
+                cost += items[item]
 
-        print(multi[i])
+            print(str(cost) + " " + item)
     
 
 
