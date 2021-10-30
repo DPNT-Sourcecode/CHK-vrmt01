@@ -25,7 +25,27 @@ def checkout(skus):
              "C" : 20, 
              "D" : 15,
              "E" : 40,
-             "F" : 10
+             "F" : 10,
+             "G" : 20,
+             "H" : 10,
+             "I" : 35,
+             "J" : 20,
+             "K" : 20,
+             "L" : 20,
+             "M" : 20,
+             "N" : 20,
+             "O" : 20,
+             "P" : 20,
+             "Q" : 20,
+             "R" : 20,
+             "S" : 20,
+             "T" : 20,
+             "U" : 20,
+             "V" : 20,
+             "W" : 20,
+             "X" : 20,
+             "Y" : 20,
+             "Z" : 20,
              }
 
     #Count occurences of items
@@ -111,3 +131,4 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
