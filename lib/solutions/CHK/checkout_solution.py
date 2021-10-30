@@ -121,8 +121,15 @@ def checkout(skus):
     #Multi
 
     #Loop multi items
-    count = 0
-    
+    for i in range(len(multi)):
+
+        item = multi[i]
+
+        #Loop for no. of occrs
+        for j in range(occrs[item]):
+            cost += items[]
+
+        print(multi[i])
     
 
 
@@ -146,8 +153,3 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
-
-
-
-
-
