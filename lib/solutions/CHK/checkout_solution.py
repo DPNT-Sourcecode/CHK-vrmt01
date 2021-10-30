@@ -73,8 +73,12 @@ def checkout(skus):
 
             #Item thats free
             free_item = free[item][1]
-            print(free_item)
 
+            if free_item in occrs:
+
+                x = min(count, occrs[free_item])
+            
+                total -= x * items[free[item][1]]
 
 
 
@@ -99,4 +103,5 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test_input))
+
 
