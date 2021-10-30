@@ -47,6 +47,7 @@ def checkout(skus):
             nums.append(offer[0])
 
         print(nums)
+        print(occrs[item])
         #Find optimal combination of special offers
         print(offer_comb(nums, occrs[item]))
 
@@ -77,5 +78,6 @@ def offer_comb(nums, goal, partial=[]):
 
 
 print(checkout(test_input))
+
 
 
