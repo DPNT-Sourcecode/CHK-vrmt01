@@ -3,7 +3,7 @@
 
 import math
 
-test = "FFF"
+test = "FFFSTX"
 
 def checkout(skus):
 
@@ -29,7 +29,7 @@ def checkout(skus):
             "U" : [4, "U"]
             }
 
-    multi = {}
+    multi = ["S", "T", "X", "Y", "Z"]
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -119,6 +119,12 @@ def checkout(skus):
 
             total -= maximum
 
+
+            #multi deals
+            if item in multi:
+                print(item)
+
+
     return total
 
 
@@ -139,4 +145,5 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
