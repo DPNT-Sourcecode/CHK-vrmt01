@@ -11,9 +11,7 @@ def checkout(skus):
     total = 0
     occrs = {}
 
-    offers = {"A" : [[3, 20], [5, 50]], 
-              "B" : [[2, 15]],
-              "E" : [[2, 30]]
+    offers = {"A" : {3 : 20, 5 : 50}, 
               }
 
     items = {"A" : 50, 
@@ -56,7 +54,9 @@ def checkout(skus):
         for comb in ans:
             total = 0
             for i in range(len(comb)):
-                
+                total += offers[item][comb[i]]
+
+            print(total)
 
 
 
