@@ -47,15 +47,18 @@ def checkout(skus):
         print(ans)
 
         best_comb = []
-        maxi = 0
+        maximum = 0
         for comb in ans:
-            total = 0
+            discount = 0
             for i in range(len(comb)):
-                total += offers[item][comb[i]]
+                discount += offers[item][comb[i]]
 
-            print(total)
-            maxi = max(maxi, total)
+            if maximum < discount:
+                maximum = discount
+                best_comb = comb
 
+        print(maximum)
+        print(best_comb)
 
 
     return total
@@ -77,6 +80,6 @@ def offer_comb(ans, nums, temp, sum, i):
             temp.remove(nums[i])
 
 
-print(checkout(test_input))
+checkout(test_input)
 
 
