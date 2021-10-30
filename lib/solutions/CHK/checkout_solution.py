@@ -13,7 +13,7 @@ def checkout(skus):
 
     offers = {"A" : [[3, 20], [5, 50]], 
               "B" : [[2, 15]],
-              "E" : [[2, 30]] #TODO 
+              "E" : [[2, 30]]
               }
 
     items = {"A" : 50, 
@@ -42,13 +42,15 @@ def checkout(skus):
         for offer in offers[item]:
             nums.append(offer[0])
             
-        print(nums)
+
+        if item in occrs:
+            offer_comb(nums, occrs[item])
 
     return total
 
 
 
-def offer_comb(num, goal, partial=[]):
+def offer_comb(nums, goal, partial=[]):
 
     s = sum(partial)
 
@@ -58,12 +60,13 @@ def offer_comb(num, goal, partial=[]):
         return
 
     for i in range(len(nums)):
-    n = nums[i]
-    remaining = nums[i+1:]
-    offer_comb(remaining, goal, partial + [n])
+        n = nums[i]
+        remaining = nums[i+1:]
+        offer_comb(remaining, goal, partial + [n])
 
 
 
 print(checkout(test_input))
+
 
 
