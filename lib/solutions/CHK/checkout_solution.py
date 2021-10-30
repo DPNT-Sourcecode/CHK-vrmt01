@@ -22,10 +22,11 @@ def checkout(skus):
     #   remove first 3 and last
     lines = skus.splitlines()[3:-1]
 
-    #Split each line by "|"
+    #Split each line by "|" and remove first and last
     lines = [item.split("|")[1:-1] for item in lines]
-    print(lines)
 
+    total = 0
+    occrs = {}
 
     #Loop sku
     #   add cost to total sum
@@ -34,10 +35,21 @@ def checkout(skus):
     #       if so, satisifed?
     #           if so, reduce sum
 
+    for line in lines:
+
+        cost = int(line[1])
+        item = line[0]
+
+        total += cost
+        x = occrs
+
+
+
     return -1
 
 
 checkout(test_input)
+
 
 
 
