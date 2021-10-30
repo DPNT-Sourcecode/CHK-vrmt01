@@ -1,7 +1,3 @@
-
-
-test_input = 500
-
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
@@ -30,7 +26,7 @@ def checkout(skus):
 
         offer = line[2].strip().split(" ")
 
-        #Check offer exists in sku
+        #Check offer exists for item
         if len(offer) > 2:
 
             if item in offers:
@@ -44,5 +40,3 @@ def checkout(skus):
                 offers[item] = [num_needed, discount]
 
     return total
-
-print(checkout(test_input))
