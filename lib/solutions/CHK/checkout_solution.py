@@ -1,21 +1,15 @@
+
+test_input = "AAABBB"
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    
-    if not type(skus) == str:
-        return -1
-
-    #Split input into lines and remove first 3 and last
-    lines = skus.splitlines()
-
-    #Split each line by "|" and remove first and last
-    lines = [item.split("|")[1:-1] for item in lines]
 
     total = 0
     occrs = {}
-    offers = {}
+    offers = {"A" : [3, 20], "B" : [2, 15]}
 
-    for line in lines:
+    for sku in skus:
 
         cost = int(line[1])
         item = line[0]
@@ -40,4 +34,5 @@ def checkout(skus):
                 offers[item] = [num_needed, discount]
 
     return total
+
 
