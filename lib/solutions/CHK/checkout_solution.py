@@ -1,18 +1,22 @@
-
-test_input = "AAABBB"
-
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
 
+    if type(skus) != str:
+        return -1
+
     total = 0
     occrs = {}
     offers = {"A" : [3, 20], "B" : [2, 15]}
-    costs = {"A" : 50, "B" : 30, "C" : 20, "D" : 15}
+    items = {"A" : 50, "B" : 30, "C" : 20, "D" : 15}
 
     for sku in skus:
 
-        cost = costs[sku]
+        if not sku in items:
+            return -1
+
+
+        cost = items[sku]
 
         total += cost   #Add cost to total
         curr = occrs.get(sku, 0)  #Current no. of occurences
@@ -24,7 +28,5 @@ def checkout(skus):
                 total -= offers[sku][1]
 
     return total
-
-print(checkout(test_input))
 
 
