@@ -29,7 +29,7 @@ def checkout(skus):
             "U" : [4, "U"]
             }
 
-    multi = ["Z", "S", "T", "Y", "X"]
+    multi = ["Z", "S", "T", "Y", "X"]   #Ordered by highest price first
 
     items = {"A" : 50, 
              "B" : 30, 
@@ -118,6 +118,13 @@ def checkout(skus):
 
             total -= maximum
 
+    #Multi
+
+    #Loop multi items
+    count = 0
+    
+    
+
 
     return total
 
@@ -139,6 +146,7 @@ def offer_comb(ans, nums, temp, sum, i):
 
 
 print(checkout(test))
+
 
 
 
