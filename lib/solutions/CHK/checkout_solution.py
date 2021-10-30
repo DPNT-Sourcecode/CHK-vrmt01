@@ -36,8 +36,31 @@ def checkout(skus):
         curr = occrs.get(sku, 0)  #Current no. of occurences
         occrs[sku] = curr + 1 #Increment no. of occurences
 
+        
+
     #Apply offers 
     for item in occrs:
+
+        #B1G1F
+        if item in free:
+
+            #How many possible discount
+            count = math.floor(occrs[item] / free[item][0])
+
+            #Item thats free
+            free_item = free[item][1]
+
+            if free_item in occrs:
+
+                x = min(count, occrs[free_item])
+            
+                total -= x * items[free[item][1]]
+
+                
+
+
+
+    for item in occrs:            
 
         if item in offers:
             nums = list(offers.get(item).keys())
@@ -60,21 +83,6 @@ def checkout(skus):
 
             total -= maximum
 
-        #B1G1F
-        if item in free:
-
-            #How many possible discount
-            count = math.floor(occrs[item] / free[item][0])
-
-            #Item thats free
-            free_item = free[item][1]
-
-            if free_item in occrs:
-
-                x = min(count, occrs[free_item])
-            
-                total -= x * items[free[item][1]]
-
 
 
 
@@ -95,5 +103,6 @@ def offer_comb(ans, nums, temp, sum, i):
             offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
+
 
 
