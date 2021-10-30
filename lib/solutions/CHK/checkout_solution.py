@@ -1,7 +1,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
-test_input = "AAAAAA"
+test_input = "AAAAAAAAAAAAAA"
 
 def checkout(skus):
 
@@ -56,16 +56,18 @@ def checkout(skus):
 
 
 
-def offer_comb(ans, nums, temp, goal, i):
+def offer_comb(ans, nums, temp, sum, i):
 
-    if goal == 0:
-        ans.append(temp)
+    if sum >= 0:
+        print(temp)
+        ans.append(list(temp))
+    if sum < 0:
         return
 
     for i in range(i, len(nums)):
-        if(goal - nums[i]) >= 0:
+        if(sum - nums[i]) >= 0:
             temp.append(nums[i])
-            offer_comb(ans, nums, temp, goal-nums[i], i)
+            offer_comb(ans, nums, temp, sum-nums[i], i)
 
             temp.remove(nums[i])
     
@@ -77,10 +79,3 @@ def offer_comb(ans, nums, temp, goal, i):
 
 
 print(checkout(test_input))
-
-
-
-
-
-
-
