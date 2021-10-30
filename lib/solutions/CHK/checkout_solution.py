@@ -30,5 +30,3 @@ def checkout(skus):
                 occrs.pop(sku)
 
     return total
-
-
